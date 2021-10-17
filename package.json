@@ -1,0 +1,27 @@
+{
+  "name": "node-04",
+  "version": "0.0.1",
+  "description": "practicando",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index",
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franco20122012/node-04.git"
+  },
+  "keywords": [],
+  "author": "Alejandro Telmo IYF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franco20122012/node-04/issues"
+  },
+  "homepage": "https://github.com/franco20122012/node-04#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.0",
+    "uuid": "^8.3.2"
+  }
+}
