@@ -1,15 +1,23 @@
 const Task=require('../models/Task');
-console.log(Task);
+const {saveData,getData}=require('../helpers/fileManager');
+console.log(saveData);
 class TaskRepository{
 
     _task=null;
 
     constructor(){
-        this._task=[];
+        const data=getData();
+        if(data){
+            this._task=data;
+
+        }else{
+            this._task=[];
+        }
+        
     }
 
     getAllTask(){
-
+        return this._task;
     }
     getTaskDone(){
 
@@ -18,6 +26,7 @@ class TaskRepository{
     createTask(title){
         const task=new Task(title);
         this._task.push(task);
+        saveData(this._task);
     }
 
 
@@ -30,3 +39,4 @@ class TaskRepository{
     }
 
 }
+module.exports=TaskRepository;

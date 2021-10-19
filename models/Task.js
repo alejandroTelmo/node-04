@@ -7,7 +7,7 @@ class Task{
     finished=null;
 
     constructor(title){
-        this.id=uuidv4;
+        this.id=uuidv4();
         this.title=title;
         this.done=false;
         this.created=new Date();
